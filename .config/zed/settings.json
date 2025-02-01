@@ -18,5 +18,6 @@
     "mode": "system",
     "light": "Gruvbox Dark Soft",
     "dark": "Gruvbox Dark Soft"
-  }
+  },
+  "soft_wrap": "editor_width"
 }
