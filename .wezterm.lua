@@ -10,5 +10,14 @@ config.color_scheme = 'Dracula'
 config.font_size = 13
 config.window_close_confirmation = 'NeverPrompt'
 
+local act = wezterm.action
+
+config.keys = {
+  -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+  { key = 'LeftArrow', mods = 'OPT', action = act.SendString '\x1bb' },
+  -- Make Option-Right equivalent to Alt-f; forward-word
+  { key = 'RightArrow', mods = 'OPT', action = act.SendString '\x1bf' },
+}
+
 -- and finally, return the configuration to wezterm
 return config
